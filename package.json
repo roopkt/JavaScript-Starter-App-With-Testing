@@ -1,0 +1,22 @@
+{
+  "name": "register",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server src -c-1 -p 4001",
+    "sync": "browser-sync start --proxy \"http://localhost:4001\" -w --files \"src/**/*.*,!src/**/*.spec.*\"",
+    "start": "concurrently \"npm:serve\" \"npm:sync\"",
+    "test":"browser-sync start --server --index src/index.spec.html -w --files \"src/**/*.*\" --ss src --ui-port 4008 "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "http-server": "^0.11.1"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
