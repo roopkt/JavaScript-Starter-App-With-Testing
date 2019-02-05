@@ -7,7 +7,7 @@
     "serve": "http-server src -c-1 -p 4001",
     "sync": "browser-sync start --proxy \"http://localhost:4001\" -w --files \"src/**/*.*,!src/**/*.spec.*\"",
     "start": "concurrently \"npm:serve\" \"npm:sync\"",
-    "test":"browser-sync start --server --index src/index.spec.html -w --files \"src/**/*.*\" --ss src --ui-port 4008 "
+    "test": "browser-sync start --server --index src/index.spec.html -w --files \"src/**/*.*\" --ss src --ui-port 4008 "
   },
   "keywords": [],
   "author": "",
